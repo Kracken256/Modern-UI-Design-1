@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modern_UI_Design_1.Views.LoginPage"
+             Title="LoginPage">
+    <StackLayout VerticalOptions="Start">
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Modern UI Design" FontSize="28" TextColor="#222" HorizontalTextAlignment="Center" Margin="0,20"/>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="0,50,0,10">
+            <VerticalStackLayout>
+                <Label Text="Welcome, please login below" HorizontalTextAlignment="Center" FontSize="22" Margin="10"/>
+            </VerticalStackLayout>
+            <Frame Padding="15,5" BackgroundColor="#eee" Margin="20" CornerRadius="10">
+                <Entry WidthRequest="300" TextColor="#111"  IsPassword="True" FontSize="16" x:Name="password_input" Placeholder="Password" PlaceholderColor="#555" TextChanged="password_input_TextChanged"/>
+            </Frame>
+            <Label Text="Invalid password" TextColor="Red" FontSize="14" IsVisible="False" x:Name="is_valid_password_warning"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="0,20,0,0" VerticalOptions="Start">
+            <Frame BackgroundColor="#33f" WidthRequest="200" Padding="0">
+                <Button Text="Continue" BackgroundColor="#33f" Padding="15" Margin="0" FontSize="17" Clicked="Button_Clicked"/>
+            </Frame>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Margin="0,20,0,0" VerticalOptions="StartAndExpand">
+            <Frame BackgroundColor="#d3f" WidthRequest="200" Padding="0">
+                <Button Text="Back to email" BackgroundColor="#d3f" Padding="15" Margin="0" FontSize="17" Clicked="Button_Clicked_1"/>
+            </Frame>
+        </VerticalStackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="15">
+            <HorizontalStackLayout HorizontalOptions="Start">
+                <Label Text="Customer Support"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Legel"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="End">
+                <Label Text="Polices"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

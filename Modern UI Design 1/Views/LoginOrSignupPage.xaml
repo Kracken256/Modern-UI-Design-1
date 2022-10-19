@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modern_UI_Design_1.Views.LoginOrSignupPage"
+             Title="LoginOrSignupPage">
+    <StackLayout VerticalOptions="Start">
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Modern UI Design" FontSize="28" TextColor="#222" HorizontalTextAlignment="Center" Margin="0,20"/>
+        </HorizontalStackLayout>
+        
+        <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="0,50,0,10">
+            <VerticalStackLayout>
+                <Label Text="Login or Signup" HorizontalTextAlignment="Center" FontSize="22" Margin="10"/>
+            </VerticalStackLayout>
+            <Frame Padding="15,5" BackgroundColor="#eee" Margin="20" CornerRadius="10">
+                <Entry WidthRequest="300" TextColor="#111" TextChanged="Entry_TextChanged" Keyboard="Email" FontSize="16" x:Name="email_input" Placeholder="Email" PlaceholderColor="#555"/>
+            </Frame>
+            <Label Text="Invalid email" TextColor="Red" FontSize="14" IsVisible="False" x:Name="is_valid_email_warning"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Margin="0,20,0,0" VerticalOptions="StartAndExpand">
+            <Frame BackgroundColor="#33f" WidthRequest="200" Padding="0">
+                <Button Text="Continue" BackgroundColor="#33f" Padding="15" Margin="0" FontSize="17" Clicked="Button_Clicked"/>
+            </Frame>
+        </VerticalStackLayout>
+        
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="StartAndExpand" Margin="15">
+            <HorizontalStackLayout HorizontalOptions="Start">
+                <Label Text="Customer Support"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Legel"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="End">
+                <Label Text="Polices"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
